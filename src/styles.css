@@ -54,8 +54,14 @@ header .navbar-brand{
 	display: inline;
 }
 
-.tituloSeccion i{
+article .tituloSeccion i{
 	float: right;
 	margin-left: 1rem;
 
 }
+.crudIcon{
+	display: inline;
+	float:right;
+	margin-inline-end: 1rem;
+}
+	

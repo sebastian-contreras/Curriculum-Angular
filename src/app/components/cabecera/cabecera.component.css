@@ -8,6 +8,9 @@
 	margin-left: 5rem;
 	/* transform: translateY(-6.5em); */
 }
+#botonesCabecera button{
+	margin-right: 1rem;
+}
 #cabeceraImagen{
 	margin-bottom: 6.5rem;
 }

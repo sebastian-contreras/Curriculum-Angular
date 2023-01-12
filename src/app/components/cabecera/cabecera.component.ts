@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class CabeceraComponent {
   urlPortada: string = "./assets/images/portada.jpg"
   urlPerfil: string = "./assets/images/thumbnail.jpg"
-
+  nombre: string = "Sebastian Contreras"
+  educacion: string = "Ingenieria en Computacion - Facet"
 }
