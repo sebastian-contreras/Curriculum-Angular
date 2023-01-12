@@ -11,6 +11,8 @@ import { SeccionComponent } from './components/seccion/seccion.component';
 import { ComponentHistoriaComponent } from './components/component-historia/component-historia.component';
 import { HardComponent } from './components/hard/hard.component';
 import { ProgressComponent } from './components/progress/progress.component';
+import { ProyectosSeccionComponent } from './components/proyectos-seccion/proyectos-seccion.component';
+import { ProyectoComponentComponent } from './components/proyecto-component/proyecto-component.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ProgressComponent } from './components/progress/progress.component';
     ComponentHistoriaComponent,
     HardComponent,
     ProgressComponent,
+    ProyectosSeccionComponent,
+    ProyectoComponentComponent,
   ],
   imports: [
     BrowserModule,
