@@ -1,0 +1,16 @@
+.bordesCebecera{
+	border: 1px solid gray;
+	border-radius: 2rem;
+}
+.fotoPerfil{
+	border-radius: 50%;
+	max-width: 175px;
+	margin-left: 5rem;
+	/* transform: translateY(-6.5em); */
+}
+#cabeceraImagen{
+	margin-bottom: 6.5rem;
+}
+#infoCabecera p{
+	margin-bottom: 0.1rem;
+}
