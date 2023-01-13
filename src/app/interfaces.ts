@@ -11,6 +11,7 @@ export interface User {
 
 export interface Historia {
   id?: number;
+  idUser?:number;
   title: string;
   place: string;
   date: string;
@@ -19,11 +20,13 @@ export interface Historia {
 
 export interface Skill   {
     id?: number;
+    idUser?:number;
     title: string;
     percent: number;
 }
 export interface Proyect {
     id?: number;
+    idUser?:number;
     title: string;
     text: string;
     url: string;
