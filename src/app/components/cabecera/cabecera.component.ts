@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-
+import { User } from 'src/app/interfaces';
+import { USERS } from 'src/app/mock';
 @Component({
   selector: 'app-cabecera',
   templateUrl: './cabecera.component.html',
   styleUrls: ['./cabecera.component.css']
 })
 export class CabeceraComponent {
-  urlPortada: string = "./assets/images/portada.jpg"
-  urlPerfil: string = "./assets/images/thumbnail.jpg"
-  nombre: string = "Sebastian Contreras"
-  educacion: string = "Ingenieria en Computacion - Facet"
+  usuario : User = USERS[0]
+  urlPortada: string = this.usuario.portraitImage
+  urlPerfil: string = this.usuario.image
+  nombre: string = this.usuario.fullName
+  educacion: string = this.usuario.shortEducation
 }

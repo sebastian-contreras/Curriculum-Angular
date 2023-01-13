@@ -1,4 +1,4 @@
-import { Historia, Proyects, Skills, User } from './interfaces';
+import { Historia, Proyect, Skill, User } from './interfaces';
 
 export const USERS: User[] = [
   {
@@ -20,14 +20,14 @@ export const EXPERIENCIAS: Historia[] = [
     title: 'Backend Developer',
     place: 'Globant - Jornada Parcial',
     date: '2014-2020',
-    image: './assets/images/trabajos/globant.jpg',
+    image: './assets/images/trabajos/globant.png',
   },
   {
     id: 2,
     title: ' Frontend Developer',
     place: 'Pixar - Jornada Parcial',
     date: '2014-2020',
-    image: './assets/images/educacion/globant.jpg',
+    image: './assets/images/trabajos/globant.png',
   },
 ];
 export const EDUCACIONES: Historia[] = [
@@ -46,7 +46,7 @@ export const EDUCACIONES: Historia[] = [
     image: './assets/images/educacion/LogoSEOC.jpg',
   },
 ];
-export const SKILLS: Skills[] = [
+export const SKILLS: Skill[] = [
   {
     id: 1,
     title: 'HTML',
@@ -63,7 +63,7 @@ export const SKILLS: Skills[] = [
     percent: 70,
   },
 ];
-export const PROYECTS: Proyects[] = [
+export const PROYECTS: Proyect[] = [
   {
     id: 1,
     title: 'Base de datos de Sistema de salud orientada a Covid-19',

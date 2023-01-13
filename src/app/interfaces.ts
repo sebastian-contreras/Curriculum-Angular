@@ -17,15 +17,15 @@ export interface Historia {
   image: string;
 }
 
-export interface Skills {
+export interface Skill   {
     id?: number;
     title: string;
     percent: number;
 }
-export interface Proyects {
+export interface Proyect {
     id?: number;
     title: string;
-    text: number;
+    text: string;
     url: string;
 }
   

@@ -3,7 +3,6 @@
     <h3 class="fw-bold">{{title}}</h3>
         <i class="crudIcon fa-solid fa-plus"></i>
     </div>
-<app-progress></app-progress>
-<app-progress></app-progress>
-<app-progress></app-progress>
+<app-progress *ngFor="let skill of habilidades" [skill]="skill"></app-progress>
+
 </div>

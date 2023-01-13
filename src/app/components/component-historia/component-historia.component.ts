@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Historia } from 'src/app/interfaces';
+import { EDUCACIONES, EXPERIENCIAS } from 'src/app/mock';
 @Component({
   selector: 'app-component-historia',
   templateUrl: './component-historia.component.html',
-  styleUrls: ['./component-historia.component.css']
+  styleUrls: ['./component-historia.component.css'],
 })
 export class ComponentHistoriaComponent {
-  title: string ="Backend Developer"
-  img: string = "./assets/images/trabajos/globant.png"
-  text: string = "Globant - Jornada Parcial"
-  fecha: string = "2014-2020"
+  @Input() cardHistoria: Historia = EXPERIENCIAS[1];
+
+
 }
+

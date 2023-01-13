@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Skill } from 'src/app/interfaces';
+import { SKILLS } from 'src/app/mock';
 
 @Component({
   selector: 'app-progress',
@@ -6,7 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./progress.component.css']
 })
 export class ProgressComponent {
-  title: string = "HTML"
-  porcentaje : number = 45
+  @Input() skill: Skill = SKILLS[0]
+  title: string = this.skill.title
+  porcentaje : number = this.skill.percent
+
 
 }
