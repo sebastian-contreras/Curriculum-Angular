@@ -5,7 +5,7 @@
       "username": "sebas",
       "fullName": "Sebastian Contreras",
       "password": "12345",
-      "aboutMe": "Lorem ipASDASDASDsum dolor sit amet consectetur adipisicing elit. Minima quo nesciunt accusamus dicta delectus ullam porro voluptatibus unde esse, qwdqwdqwrecusandae eum assumenda magnam consequuntur beatae necessitatibus iusto reprehenderit harum ipsa?dddddas",
+      "aboutMe": "Lorem dolor sit amet consectetur adipisicing elit. Minima quo nesciunt accusamus dicta delectus ullam porro voluptatibus unde esse, qwdqwdqwrecusandae eum assumenda magnam consequuntur beatae necessitatibus iusto reprehenderit harum ipsa?123",
       "shortEducation": "Ingenieria en Computacion - Facet",
       "image": "./assets/images/thumbnail.jpg",
       "portraitImage": "./assets/images/portada.jpg"
@@ -13,16 +13,16 @@
   ],
   "EXPERIENCIAS": [
     {
-      "idUsuario": 1,
       "id": 1,
+      "idUsuario": 1,
       "title": "Backend Develeeoper",
       "place": "Globant - Jornada Parcial",
       "date": "2014-2020",
       "image": "./assets/images/trabajos/globant.png"
     },
     {
-      "idUsuario": 1,
       "id": 2,
+      "idUsuario": 1,
       "title": " Frontend Developer",
       "place": "Pixar - Jornada Parcial",
       "date": "2014-2020",

@@ -1,7 +1,43 @@
 <div class="bordesSeccion">
     <div class="tituloSeccion mb-3">
     <h3 class="fw-bold">{{title}}</h3>
-        <i class="crudIcon fa-solid fa-plus"></i>
+        <button data-bs-toggle="modal" [attr.data-bs-target]="'#Modal'+title"  class="crudIcon fa-solid fa-plus"></button>
     </div>
     <app-component-historia *ngFor="let unidad of arreglo" [cardHistoria] = "unidad"></app-component-historia>
 </div>
+
+<!-- Modal Edicion -->
+<!-- <div [attr.id]="'Modal'+title"><h1>gasdasdasdas</h1></div> -->
+  <!-- Modal -->
+  <div class="modal fade" [attr.id]="'Modal'+title" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form [formGroup]="form" class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva {{title}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group mb-2">
+                <label for="exampleFormControlInput1">Titulo</label>
+                <input type="text" formControlName="titulo" class="form-control" id="exampleFormControlInput1" placeholder="Titulo">
+              </div>
+              <div class="form-group mb-2">
+                <label for="exampleFormControlInput1">Lugar</label>
+                <input type="text" formControlName="lugar" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+              </div>
+              <div class="form-group mb-2">
+                <label for="exampleFormControlInput1">Imagen(Opcional)</label>
+                <input type="url" formControlName="imagen" class="form-control" id="exampleFormControlInput1" placeholder="URL">
+              </div>
+              <div class="form-group mb-2">
+                <label for="exampleFormControlInput1">Fecha</label>
+                <input type="text" formControlName="fecha" class="form-control" id="exampleFormControlInput1" placeholder="Inicio - Fin">
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="onClick()"  data-bs-dismiss="modal">Guardar</button>
+        </div>
+    </form>
+    </div>
+  </div>

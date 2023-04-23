@@ -16,8 +16,6 @@ export class UserService {
   }
   modifyUser(user: User): void {
     var headers = new HttpHeaders({'Content-Type': 'application/json'});
-    // return this.http.put<User>(`${this.apiUrl}/${user.id}`, user, httpOptions);
-    console.log(user);
     this.http.put<User>(`${this.apiUrl}/${user.id}`, user).subscribe();
   }
 }

@@ -12,7 +12,7 @@ export interface User {
 
 export interface Historia {
   id?: number;
-  idUser?:number;
+  idUser:number;
   title: string;
   place: string;
   date: string;

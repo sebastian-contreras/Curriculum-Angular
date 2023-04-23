@@ -28,22 +28,25 @@ export const USERS: User[] = [
 export const EXPERIENCIAS: Historia[] = [
   {
     id: 1,
-    title: 'Backend Developer',
-    place: 'Globant - Jornada Parcial',
-    date: '2014-2020',
-    image: './assets/images/trabajos/globant.png',
+    idUser:1,
+    title: '',
+    place: '',
+    date: '',
+    image: '',
   },
   {
     id: 2,
-    title: ' Frontend Developer',
-    place: 'Pixar - Jornada Parcial',
-    date: '2014-2020',
-    image: './assets/images/trabajos/globant.png',
+    idUser:1,
+    title: '',
+    place: '',
+    date: '',
+    image: '.',
   },
 ];
 export const EDUCACIONES: Historia[] = [
   {
     id: 1,
+    idUser:1,
     title: 'Universidad Nacional de tucuman',
     place: 'Ingenieria en Computacion - FACET',
     date: '2017-Actualidad',
@@ -51,6 +54,7 @@ export const EDUCACIONES: Historia[] = [
   },
   {
     id: 2,
+    idUser:1,
     title: 'Titulo Secundario',
     place: 'Instituto Congreso de tucuman SEOC',
     date: '2014-2016',

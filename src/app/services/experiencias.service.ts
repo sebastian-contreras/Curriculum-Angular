@@ -9,16 +9,18 @@ const httpOptions = {
   }),
 };
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class ExperienciasService {
-    private apiUrl: string = 'http://localhost:5000/';
-  
-    constructor(private http: HttpClient) {}
-  
-    getExperiencias(idUser: number,tipo:string): Observable<Historia[]> {
-      return this.http.get<Historia[]>(`${this.apiUrl}${tipo} `)
-    }
-  }
+  private apiUrl: string = 'http://localhost:5000/';
 
+  constructor(private http: HttpClient) {}
+
+  getExperiencias(idUser: number, tipo: string): Observable<Historia[]> {
+    return this.http.get<Historia[]>(`${this.apiUrl}${tipo} `);
+  }
+  addHistoria(tipo: string, newHistoria: Historia){
+    console.log(`${this.apiUrl}${tipo}`);
+    return this.http.post<Historia>(`${this.apiUrl}${tipo} `, newHistoria).subscribe();
+  }
+}

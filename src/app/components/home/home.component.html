@@ -3,8 +3,8 @@
     <app-cabecera [usuario]="user"></app-cabecera>
     <app-about-me [informacion]="user"></app-about-me>
 
-    <app-seccion [title]='seccionExperiencia' [arreglo]="experiencias"></app-seccion>
-    <app-seccion [title]='seccionEducacion' [arreglo]="educaciones"></app-seccion>
+    <app-seccion [title]='seccionExperiencia' [arreglo]="experiencias" [usuarioId]="user.id || 0"></app-seccion>
+    <app-seccion [title]='seccionEducacion' [arreglo]="educaciones" [usuarioId]="user.id || 0"></app-seccion>
     <app-hard [habilidades]="habilidades"></app-hard>
     <app-proyectos-seccion [proyectos]="proyectos"></app-proyectos-seccion>
 </div>
