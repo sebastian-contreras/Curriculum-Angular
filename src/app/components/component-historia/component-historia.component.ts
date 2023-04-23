@@ -1,6 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Historia } from 'src/app/interfaces';
 import { EDUCACIONES, EXPERIENCIAS } from 'src/app/mock';
+
+import { UserService } from '../../services/user.service';
+
 @Component({
   selector: 'app-component-historia',
   templateUrl: './component-historia.component.html',
@@ -8,7 +11,6 @@ import { EDUCACIONES, EXPERIENCIAS } from 'src/app/mock';
 })
 export class ComponentHistoriaComponent {
   @Input() cardHistoria: Historia = EXPERIENCIAS[1];
-
 
 }
 

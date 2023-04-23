@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Proyect } from 'src/app/interfaces';
 import { PROYECTS } from 'src/app/mock';
 
@@ -8,6 +8,6 @@ import { PROYECTS } from 'src/app/mock';
   styleUrls: ['./proyectos-seccion.component.css']
 })
 export class ProyectosSeccionComponent {
-  proyectos: Proyect[] = PROYECTS
+  @Input() proyectos: Proyect[] = PROYECTS
 
 }

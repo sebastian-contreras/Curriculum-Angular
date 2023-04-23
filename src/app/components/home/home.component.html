@@ -1,0 +1,11 @@
+<app-header [title]="user.fullName"></app-header>
+<div class="container">
+    <app-cabecera [usuario]="user"></app-cabecera>
+    <app-about-me [informacion]="user"></app-about-me>
+
+    <app-seccion [title]='seccionExperiencia' [arreglo]="experiencias"></app-seccion>
+    <app-seccion [title]='seccionEducacion' [arreglo]="educaciones"></app-seccion>
+    <app-hard [habilidades]="habilidades"></app-hard>
+    <app-proyectos-seccion [proyectos]="proyectos"></app-proyectos-seccion>
+</div>
+<app-footer></app-footer>

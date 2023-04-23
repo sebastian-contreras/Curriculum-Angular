@@ -2,9 +2,12 @@
 	border: 1px solid gray;
 	border-radius: 2rem;
 }
+.fotoContainer{
+	width:175px;
+    height:175px;
+}
 .fotoPerfil{
 	border-radius: 50%;
-	max-width: 175px;
 	margin-left: 5rem;
 	/* transform: translateY(-6.5em); */
 }

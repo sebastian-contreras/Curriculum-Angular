@@ -1,25 +1,26 @@
 <div id="cabecera" class="bordesCebecera">
     <div id="cabeceraImagen" class="position-relative">
         <div class="PortadaEstilo">
-            <img src={{urlPortada}} alt="">
+            <img src={{usuario.portraitImage}} alt="">
         </div>
-        <img src={{urlPerfil}} class="fotoPerfil position-absolute translate-middle-y" alt="">
+        <!-- <div class="fotoContainer"> -->
+            <img src={{usuario.image}} class="fotoContainer fotoPerfil position-absolute translate-middle-y" alt="">
+        <!-- </div> -->
     </div>
     <div id="infoCabecera" class="px-5">
         <span>
             <div class="tituloSeccion">
-                <h3 class="fw-bold">{{nombre}}</h3>
+                <h3 class="fw-bold">{{usuario.fullName}}</h3>
                 <i class="crudIcon fa-solid fa-pen"></i>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <p class="fw-light text-muted">{{educacion}}</p><br>
+                    <p class="fw-light text-muted">{{usuario.shortEducation}}</p><br>
                     <p><a href="#">Informacion de contacto</a> </p>
                 </div>
 
                 <div class="col-6 text-end">
-                    <span class="fw-bold d-block">Conicet</span>
-                    <span class="fw-bold d-block">Universidad Nacional de Tucuman</span>
+                    <span class="fw-bold d-block">{{usuario.shortEducation}}</span>
                 </div>
             </div>
             <div id="botonesCabecera" class="my-3">

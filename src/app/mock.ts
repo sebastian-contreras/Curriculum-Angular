@@ -2,6 +2,17 @@ import { Historia, Proyect, Skill, User } from './interfaces';
 
 export const USERS: User[] = [
   {
+    id: 0,
+    username: '',
+    fullName: '',
+    password: '',
+    aboutMe:
+      '',
+    shortEducation: '',
+    image: '',
+    portraitImage: '',
+  },
+  {
     id: 1,
     username: 'sebas',
     fullName: 'Sebastian Contreras',
@@ -67,7 +78,7 @@ export const PROYECTS: Proyect[] = [
   {
     id: 1,
     title: 'Base de datos de Sistema de salud orientada a Covid-19',
-    text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe maiores cum blanditiis cupiditate adipisci suscipit minima obcaecati dolores, voluptate numquam accusamus architecto incidunt quas fuga quidem modi eum quod. Debitis!',
+    text: '',
     url: 'string',
   },
   {

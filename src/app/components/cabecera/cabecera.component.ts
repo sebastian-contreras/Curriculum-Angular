@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { User } from 'src/app/interfaces';
 import { USERS } from 'src/app/mock';
 @Component({
@@ -7,9 +7,6 @@ import { USERS } from 'src/app/mock';
   styleUrls: ['./cabecera.component.css']
 })
 export class CabeceraComponent {
-  usuario : User = USERS[0]
-  urlPortada: string = this.usuario.portraitImage
-  urlPerfil: string = this.usuario.image
-  nombre: string = this.usuario.fullName
-  educacion: string = this.usuario.shortEducation
+  @Input() usuario:  User = USERS[0];
+
 }

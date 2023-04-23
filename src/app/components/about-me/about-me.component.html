@@ -2,8 +2,31 @@
 <div id="acercaDeMi" class="bordesSeccion">
     <div class="tituloSeccion">
         <h3 class="fw-bold">Acerca de mi</h3>
-        <i class="crudIcon fa-solid fa-pen"></i>
+        <button class="crudIcon fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
     </div>
-    <p>{{text}}</p>
+    <p>{{informacion.aboutMe}}</p>
 </div>
 <!--Fin Acerca de mi -->
+
+<!-- Modal Edicion -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form [formGroup]="form" class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-floating">
+                <textarea value={{informacion.aboutMe}} formControlName="textoArea" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Acerca de mi</label>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="onClick()">Guardar Cambios</button>
+        </div>
+    </form>
+    </div>
+  </div>

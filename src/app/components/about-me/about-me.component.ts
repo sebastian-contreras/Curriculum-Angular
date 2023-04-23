@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
 import {USERS} from '../../mock'
 import {User} from '../../interfaces'
 @Component({
@@ -7,6 +9,15 @@ import {User} from '../../interfaces'
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
-  usuario: User = USERS[0]
-  text: string = USERS[0].aboutMe
+  constructor(private userService: UserService){}
+  @Input() informacion: User = USERS[0]
+  form = new FormGroup({
+    textoArea: new FormControl(""),
+  });
+  onClick(){
+    console.log(this.form.value.textoArea);
+    this.informacion.aboutMe = this.form.value.textoArea || ""
+    console.log(this.informacion.aboutMe)
+    this.userService.modifyUser(this.informacion)
+  }
 }

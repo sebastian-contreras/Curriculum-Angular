@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Skill } from 'src/app/interfaces';
 import { SKILLS } from 'src/app/mock';
 @Component({
@@ -8,5 +8,5 @@ import { SKILLS } from 'src/app/mock';
 })
 export class HardComponent {
   title: string = " Hard skills & Soft skills"
-  habilidades: Skill[] = SKILLS;
+  @Input() habilidades: Skill[] = SKILLS;
 }

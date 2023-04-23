@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,8 @@ import { HardComponent } from './components/hard/hard.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { ProyectosSeccionComponent } from './components/proyectos-seccion/proyectos-seccion.component';
 import { ProyectoComponentComponent } from './components/proyecto-component/proyecto-component.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +31,14 @@ import { ProyectoComponentComponent } from './components/proyecto-component/proy
     ProgressComponent,
     ProyectosSeccionComponent,
     ProyectoComponentComponent,
+    HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
