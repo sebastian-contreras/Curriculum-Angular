@@ -16,11 +16,21 @@ export class ExperienciasService {
 
   constructor(private http: HttpClient) {}
 
-  getExperiencias(idUser: number, tipo: string): Observable<Historia[]> {
-    return this.http.get<Historia[]>(`${this.apiUrl}${tipo} `);
+  getExperiencias(idUser: number): Observable<Historia[]> {
+    return this.http.get<Historia[]>(`${this.apiUrl}HISTORIAS`);
   }
   addHistoria(tipo: string, newHistoria: Historia){
-    console.log(`${this.apiUrl}${tipo}`);
-    return this.http.post<Historia>(`${this.apiUrl}${tipo} `, newHistoria).subscribe();
+    console.log(`${this.apiUrl}`);
+    return this.http.post<Historia>(`${this.apiUrl}HISTORIAS`, newHistoria).subscribe();
+  }
+  modifyHistoria(newHistoria: Historia): void {
+    var headers = new HttpHeaders({'Content-Type': 'application/json'});
+    this.http.put<Historia>(`${this.apiUrl}HISTORIAS/${newHistoria.id} `, newHistoria).subscribe();
+  }
+  deleteHystory(id:number) {
+    var headers = new HttpHeaders({'Content-Type': 'application/json'});
+    console.log(id)
+    console.log(`${this.apiUrl}HISTORIAS/${id} `)
+    this.http.delete(`${this.apiUrl}HISTORIAS/${id}`).subscribe()
   }
 }

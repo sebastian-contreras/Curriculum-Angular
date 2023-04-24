@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Historia, Proyect, Skill, User } from '../../interfaces';
-import { EDUCACIONES, EXPERIENCIAS, PROYECTS, SKILLS, USERS } from '../../mock';
+import { HISTORIAS, PROYECTS, SKILLS, USERS } from '../../mock';
 import { UserService } from '../../services/user.service';
 import { HabilidadesService } from 'src/app/services/habilidades.service';
 import { ExperienciasService } from 'src/app/services/experiencias.service';
@@ -13,8 +13,8 @@ import { catchError, throwError } from 'rxjs';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  experiencias: Historia[] = EXPERIENCIAS;
-  educaciones: Historia[] = EDUCACIONES;
+  experiencias: Historia[] = HISTORIAS;
+  educaciones: Historia[] = HISTORIAS;
   habilidades: Skill[] = SKILLS;
   proyectos: Proyect[] = PROYECTS;
   seccionExperiencia: string = 'Experiencia';
@@ -53,25 +53,18 @@ export class HomeComponent {
       .subscribe((user) => {
         this.user = user;
       });
-
     this.experienciaService
-      .getExperiencias(idUsuario, 'EXPERIENCIAS')
-      .subscribe((experiencias) => {
-        this.experiencias = experiencias;
+      .getExperiencias(idUsuario)
+      .subscribe((historias) => {
+        this.experiencias = historias.filter(historia => !historia.tipo);
+        this.educaciones = historias.filter(historia => historia.tipo);
       });
-
-    this.experienciaService
-      .getExperiencias(idUsuario, 'EDUCACIONES')
-      .subscribe((educaciones) => {
-        this.educaciones = educaciones;
-      });
-
     this.habilidadesService.getSKILLS(idUsuario).subscribe((skill) => {
       this.habilidades = skill;
     });
-
     this.proyectoService.getProyects(idUsuario).subscribe((proyectos) => {
       this.proyectos = proyectos;
     });
   }
+
 }

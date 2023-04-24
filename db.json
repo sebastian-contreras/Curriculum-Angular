@@ -11,14 +11,15 @@
       "portraitImage": "./assets/images/portada.jpg"
     }
   ],
-  "EXPERIENCIAS": [
+  "HISTORIAS": [
     {
       "id": 1,
       "idUsuario": 1,
-      "title": "Backend Develeeoper",
+      "title": "Backend Developers",
       "place": "Globant - Jornada Parcial",
       "date": "2014-2020",
-      "image": "./assets/images/trabajos/globant.png"
+      "image": "./assets/images/trabajos/globant.png",
+      "tipo": false
     },
     {
       "id": 2,
@@ -26,25 +27,35 @@
       "title": " Frontend Developer",
       "place": "Pixar - Jornada Parcial",
       "date": "2014-2020",
-      "image": "./assets/images/trabajos/globant.png"
-    }
-  ],
-  "EDUCACIONES": [
-    {
-      "id": 1,
-      "idUsuario": 1,
-      "title": "Universidad Nacional de tucuman",
-      "place": "Ingenieria en Computacion - FACET",
-      "date": "2017-Actualidad",
-      "image": "./assets/images/educacion/unt.jpg"
+      "image": "./assets/images/trabajos/globant.png",
+      "tipo": false
     },
     {
-      "id": 2,
+      "id": 3,
       "idUsuario": 1,
-      "title": "Titulo Secundariossss",
+      "title": "Universidad Nacional de tucuman",
+      "place": "Ingenieria en Computacion",
+      "date": "2017-Actualidad",
+      "image": "./assets/images/educacion/unt.jpg",
+      "tipo": true
+    },
+    {
+      "id": 4,
+      "idUsuario": 1,
+      "title": "Titulo Secundario",
       "place": "Instituto Congreso de tucuman SEOC",
       "date": "2014-2016",
-      "image": "./assets/images/educacion/LogoSEOC.jpg"
+      "image": "./assets/images/educacion/LogoSEOC.jpg",
+      "tipo": true
+    },
+    {
+      "idUser": 1,
+      "tipo": false,
+      "title": "Google Design",
+      "place": "Google",
+      "image": "https://w7.pngwing.com/pngs/326/85/png-transparent-google-logo-google-text-trademark-logo.png",
+      "date": "1999 - 2003",
+      "id": 5
     }
   ],
   "SKILLS": [

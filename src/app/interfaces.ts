@@ -17,6 +17,8 @@ export interface Historia {
   place: string;
   date: string;
   image: string;
+  tipo: boolean;
+  // 0 = Experiencias , 1 = Educacion
 }
 
 export interface Skill   {

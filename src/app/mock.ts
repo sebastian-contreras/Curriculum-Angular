@@ -25,7 +25,7 @@ export const USERS: User[] = [
   },
 ];
 
-export const EXPERIENCIAS: Historia[] = [
+export const HISTORIAS: Historia[] = [
   {
     id: 1,
     idUser:1,
@@ -33,6 +33,7 @@ export const EXPERIENCIAS: Historia[] = [
     place: '',
     date: '',
     image: '',
+    tipo: false
   },
   {
     id: 2,
@@ -41,9 +42,8 @@ export const EXPERIENCIAS: Historia[] = [
     place: '',
     date: '',
     image: '.',
+    tipo: false
   },
-];
-export const EDUCACIONES: Historia[] = [
   {
     id: 1,
     idUser:1,
@@ -51,6 +51,7 @@ export const EDUCACIONES: Historia[] = [
     place: 'Ingenieria en Computacion - FACET',
     date: '2017-Actualidad',
     image: './assets/images/educacion/unt.jpg',
+    tipo: true
   },
   {
     id: 2,
@@ -59,6 +60,7 @@ export const EDUCACIONES: Historia[] = [
     place: 'Instituto Congreso de tucuman SEOC',
     date: '2014-2016',
     image: './assets/images/educacion/LogoSEOC.jpg',
+    tipo: true
   },
 ];
 export const SKILLS: Skill[] = [

@@ -1,10 +1,49 @@
 <article class="trabajo">
     <div class="tituloSeccion ">
         <h6 class="fw-bold">{{cardHistoria.title}}</h6>
-        <i class="crudIcon fa-solid fa-pen"></i>
-        <i class="crudIcon fa-solid fa-trash"></i>
-    </div>
+        <button class="btn btn-success btn-sm rounded-0 crudIcon" data-bs-toggle="modal" [attr.data-bs-target]="'#EdicionModal'+cardHistoria.id"  type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+        <!-- <button data-bs-toggle="modal" [attr.data-bs-target]="'#EdicionModal'+cardHistoria.id" class="crudIcon fa-solid fa-pen"></button> -->
+        <button (click)="onClickDelete()" class="btn btn-danger btn-sm rounded-0 crudIcon" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+        <!-- <button (click)="onClickDelete()" class=" px-2 crudIcon fa-solid fa-trash"></button>
+        <button class="crudIcon fa-trash fa-solid" (click)="onClickDelete()"></button> -->
+      </div>
     <img src={{cardHistoria.image}} alt="">
     <span>{{cardHistoria.place}}</span>
     <p class="text-muted">{{cardHistoria.date}}</p>
 </article>
+
+<!-- Modal Edicion -->
+<!-- <div [attr.id]="'Modal'+title"><h1>gasdasdasdas</h1></div> -->
+  <!-- Modal -->
+  <div class="modal fade" [attr.id]="'EdicionModal'+cardHistoria.id" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form [formGroup]="form" class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edicion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group mb-2">
+                <label for="exampleFormControlInput1">Titulo</label>
+                <input [ngModel]="cardHistoria.title" formControlName="titulo" type="text"  class="form-control" id="exampleFormControlInput1" placeholder="Titulo">
+            </div>
+              <div class="form-group mb-2">
+                <label for="exampleFormControlInput1">Lugar</label>
+                <input [ngModel]="cardHistoria.place" type="text" formControlName="lugar" class="form-control" id="exampleFormControlInput1" placeholder="Lugar">
+              </div>
+              <div class="form-group mb-2">
+                <label for="exampleFormControlInput1">Imagen(Opcional)</label>
+                <input [ngModel]="cardHistoria.image" type="url" formControlName="imagen" class="form-control" id="exampleFormControlInput1" placeholder="URL">
+              </div>
+              <div class="form-group mb-2">
+                <label for="exampleFormControlInput1">Fecha</label>
+                <input [ngModel]="cardHistoria.date" type="text" formControlName="fecha" class="form-control" id="exampleFormControlInput1" placeholder="Inicio - Fin">
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="onClick()"  data-bs-dismiss="modal">Guardar</button>
+        </div>
+    </form>
+    </div>
+  </div>

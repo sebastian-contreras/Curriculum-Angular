@@ -3,7 +3,7 @@
     <h3 class="fw-bold">{{title}}</h3>
         <button data-bs-toggle="modal" [attr.data-bs-target]="'#Modal'+title"  class="crudIcon fa-solid fa-plus"></button>
     </div>
-    <app-component-historia *ngFor="let unidad of arreglo" [cardHistoria] = "unidad"></app-component-historia>
+    <app-component-historia (SacarDatoPadre)="SacarHistoriaArray($event)" *ngFor="let unidad of arreglo" [cardHistoria] = "unidad"></app-component-historia>
 </div>
 
 <!-- Modal Edicion -->
