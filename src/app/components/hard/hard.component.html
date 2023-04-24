@@ -1,8 +1,36 @@
 <div class="bordesSeccion">
     <div class="tituloSeccion mb-3">
     <h3 class="fw-bold">{{title}}</h3>
-        <i class="crudIcon fa-solid fa-plus"></i>
+    <button class="btn btn-primary btn-sm rounded-0 crudIcon" data-bs-toggle="modal" data-bs-target="#ModalSkill" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-plus"></i></button>
     </div>
-<app-progress *ngFor="let skill of habilidades" [skill]="skill"></app-progress>
-
+<app-progress (SacarDatoPadre)="SacarSkillArray($event)" *ngFor="let skill of habilidades" [skill]="skill"></app-progress>
 </div>
+
+<!-- Modal Edicion -->
+  <!-- Modal -->
+  <div class="modal fade" id="ModalSkill" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div  class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva habilidad</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="form">
+                <div  class="form-group mb-2">
+                  <label for="formGroupExampleInput">Nombre</label>
+                  <input formControlName="habilidadNombre" type="text" class="form-control" id="formGroupExampleInput" placeholder="HTML, CSS, ....">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Porcentaje de conocimiento</label>
+                  <input formControlName="porcentajeForm" step="10" min="0" max="100" type="number" class="form-control" id="formGroupExampleInput2" placeholder="0 - 100">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="onClick()">Guardar</button>
+        </div>
+    </div>
+    </div>
+  </div>

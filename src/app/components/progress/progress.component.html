@@ -1,8 +1,8 @@
 <article class="text-center trabajo">
     <div class="tituloSeccion">
         <p class="mb-1">{{skill.title}}</p>
-        <i class="crudIcon fa-solid fa-pen"></i>
-        <i class="crudIcon fa-solid fa-trash"></i>
+        <button data-bs-toggle="modal" [attr.data-bs-target]="'#ModalSkill'+skill.id"  class="btn btn-success btn-sm rounded-0 crudIcon"><i class="fa fa-pen"></i></button>
+        <button class="btn btn-danger btn-sm rounded-0 crudIcon" (click)="onClickDelete()"><i class="fa fa-trash"></i></button>
     </div>
     <div class="progress">
         <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
@@ -10,3 +10,32 @@
             aria-valuemax="100"></div>
     </div>
 </article>
+
+<!-- Modal Edicion -->
+  <!-- Modal -->
+  <div class="modal fade" [attr.id]="'ModalSkill'+skill.id" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div  class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edicion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="form">
+                <div  class="form-group mb-2">
+                  <label for="formGroupExampleInput">Nombre</label>
+                  <input formControlName="habilidadNombre" [ngModel]="skill.title" type="text" class="form-control" id="formGroupExampleInput" placeholder="HTML, CSS, ....">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Porcentaje de conocimiento</label>
+                  <input [ngModel]="skill.percent" formControlName="porcentajeForm" step="10" min="0" max="100" type="number" class="form-control" id="formGroupExampleInput2" placeholder="0 - 100">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="onClick()">Guardar</button>
+        </div>
+    </div>
+    </div>
+  </div>

@@ -22,8 +22,6 @@ export class ComponentHistoriaComponent {
   });
 
   onClickDelete(){
-    console.log("aascdas")
-    console.log(this.cardHistoria.id)
     this.SacarDatoPadre.emit(this.cardHistoria.id || 0)
     this.historiaService.deleteHystory(this.cardHistoria.id || 0)
   }

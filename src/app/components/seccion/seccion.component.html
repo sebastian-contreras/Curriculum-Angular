@@ -1,8 +1,9 @@
 <div class="bordesSeccion">
     <div class="tituloSeccion mb-3">
     <h3 class="fw-bold">{{title}}</h3>
-        <button data-bs-toggle="modal" [attr.data-bs-target]="'#Modal'+title"  class="crudIcon fa-solid fa-plus"></button>
-    </div>
+        <button data-bs-toggle="modal" [attr.data-bs-target]="'#Modal'+title"  class="btn btn-primary btn-sm rounded-0 crudIcon"  type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-plus"></i></button>
+   
+      </div>
     <app-component-historia (SacarDatoPadre)="SacarHistoriaArray($event)" *ngFor="let unidad of arreglo" [cardHistoria] = "unidad"></app-component-historia>
 </div>
 

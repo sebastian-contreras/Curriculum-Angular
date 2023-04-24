@@ -72,16 +72,10 @@
       "percent": 30
     },
     {
-      "id": 3,
-      "idUsuario": 1,
-      "title": "J3S",
-      "percent": 70
-    },
-    {
       "id": 4,
       "idUsuario": 1,
       "title": "Angular",
-      "percent": 70
+      "percent": 60
     }
   ],
   "PROYECTS": [
