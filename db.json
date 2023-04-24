@@ -7,8 +7,8 @@
       "password": "12345",
       "aboutMe": "Lorem dolor sit amet consectetur adipisicing elit. Minima quo nesciunt accusamus dicta delectus ullam porro voluptatibus unde esse, qwdqwdqwrecusandae eum assumenda magnam consequuntur beatae necessitatibus iusto reprehenderit harum ipsa?123",
       "shortEducation": "Ingenieria en Computacion - Facet",
-      "image": "./assets/images/thumbnail.jpg",
-      "portraitImage": "./assets/images/portada.jpg"
+      "image": "https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg",
+      "portraitImage": "https://i.pinimg.com/originals/34/0a/61/340a61c8a5b20b86a1cc9673ec325f4a.jpg"
     }
   ],
   "HISTORIAS": [
@@ -63,7 +63,7 @@
       "id": 1,
       "idUsuario": 1,
       "title": "HTML",
-      "percent": 34
+      "percent": 70
     },
     {
       "id": 2,
@@ -84,7 +84,7 @@
       "idUsuario": 1,
       "title": "Bsase sde datos de Sistema de salud orientada a Covid-19",
       "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe maiores cum blanditiis cupiditate adipisci suscipit minima obcaecati dolores, voluptate numquam accusamus architecto incidunt quas fuga quidem modi eum quod. Debitis!",
-      "url": "string"
+      "url": "https://www.github.com"
     },
     {
       "id": 2,
@@ -99,13 +99,6 @@
       "title": "Contador de insectos en Sticky paper IA",
       "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe maiores cum blanditiis cupiditate adipisci suscipit minima obcaecati dolores, voluptate numquam accusamus architecto incidunt quas fuga quidem modi eum quod. Debitis!",
       "url": "string"
-    },
-    {
-      "idUser": 0,
-      "title": "nuev o proyecto",
-      "text": "qweqweqwe",
-      "url": "https://web.whatsapp.com/",
-      "id": 4
     }
   ]
 }

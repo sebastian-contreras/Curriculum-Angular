@@ -15,9 +15,7 @@ export class AboutMeComponent {
     textoArea: new FormControl(""),
   });
   onClick(){
-    console.log(this.form.value.textoArea);
     this.informacion.aboutMe = this.form.value.textoArea || ""
-    console.log(this.informacion.aboutMe)
     this.userService.modifyUser(this.informacion)
   }
 }

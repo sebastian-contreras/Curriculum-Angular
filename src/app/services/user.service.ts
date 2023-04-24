@@ -18,4 +18,5 @@ export class UserService {
     var headers = new HttpHeaders({'Content-Type': 'application/json'});
     this.http.put<User>(`${this.apiUrl}/${user.id}`, user).subscribe();
   }
+
 }

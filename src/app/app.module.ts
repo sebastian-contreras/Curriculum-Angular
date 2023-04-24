@@ -17,6 +17,8 @@ import { ProyectosSeccionComponent } from './components/proyectos-seccion/proyec
 import { ProyectoComponentComponent } from './components/proyecto-component/proyecto-component.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { LoginComponent } from './components/login/login.component';
     ProyectoComponentComponent,
     HomeComponent,
     LoginComponent,
+    LoginFormComponent,
+    RegisterFormComponent,
   ],
   imports: [
     BrowserModule,
