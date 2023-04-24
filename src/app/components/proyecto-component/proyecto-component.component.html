@@ -3,8 +3,47 @@
         <h5 class="fw-bold mb-2">
             <a href="{{unidad.url}}">{{unidad.title}}</a>
         </h5>
-        <i class="fa-solid fa-pen crudIcon"></i>
-        <i class="fa-solid fa-trash crudIcon"></i>
+        <button data-bs-toggle="modal" [attr.data-bs-target]="'#ModalProyectosEdit'+unidad.id" class="crudIcon btn btn-success btn-sm rounded-0 "><i class="fa fa-pen"></i></button>
+        <button (click)="onClickDelete()" class="crudIcon btn btn-danger btn-sm rounded-0 "><i class="fa fa-trash"></i></button>
     </div>
     <p>{{unidad.text}}</p>
 </article>
+
+
+<!-- Modal Edicion -->
+<!-- Modal -->
+<div class="modal fade" [attr.id]="'ModalProyectosEdit'+unidad.id" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edicion</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <div class="form-group mb-2">
+                        <label for="formGroupExampleInput">Titulo</label>
+                        <input [ngModel]="unidad.title" formControlName="tituloForm" type="text" class="form-control" id="formGroupExampleInput"
+                            placeholder="Titulo de proyecto">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Descripcion</label>
+                        <textarea [ngModel]="unidad.text" formControlName="textForm" type="text" class="form-control"
+                            id="formGroupExampleInput2" placeholder="Descripcion de proyecto"> </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Enlace a proyecto</label>
+                        <input [ngModel]="unidad.url" formControlName="urlForm" type="url" class="form-control" id="formGroupExampleInput2"
+                            placeholder="http://...">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                    (click)="onClick()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

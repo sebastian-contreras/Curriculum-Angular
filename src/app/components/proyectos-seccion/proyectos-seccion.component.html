@@ -1,8 +1,47 @@
 <div id="proyectos" class="bordesSeccion mb-3">
     <div class="tituloSeccion mb-3">
         <h3 class="fw-bold mb-3">Proyectos</h3>
-        <i class="crudIcon fa-solid fa-plus"></i>
+        <button data-bs-toggle="modal" data-bs-target="#ModalProyectos"
+            class="crudIcon btn btn-primary btn-sm rounded-0 "><i class="fa fa-plus"></i></button>
     </div>
-    <app-proyecto-component *ngFor="let proyecto of proyectos" [unidad]="proyecto"></app-proyecto-component>
-    
+    <app-proyecto-component (SacarDatoPadre)="SacarProyectoArray($event)" *ngFor="let proyecto of proyectos" [unidad]="proyecto"></app-proyecto-component>
+
+</div>
+
+<!-- Modal Edicion -->
+<!-- Modal -->
+<div class="modal fade" id="ModalProyectos" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Proyecto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <div class="form-group mb-2">
+                        <label for="formGroupExampleInput">Titulo</label>
+                        <input formControlName="tituloForm" type="text" class="form-control" id="formGroupExampleInput"
+                            placeholder="Titulo de proyecto">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Descripcion</label>
+                        <textarea formControlName="textForm" type="text" class="form-control"
+                            id="formGroupExampleInput2" placeholder="Descripcion de proyecto"> </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Enlace a proyecto</label>
+                        <input formControlName="urlForm" type="url" class="form-control" id="formGroupExampleInput2"
+                            placeholder="http://...">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                    (click)="onClick()">Guardar</button>
+            </div>
+        </div>
+    </div>
 </div>
