@@ -19,7 +19,7 @@ export class HardComponent {
   @Input() habilidades: Skill[] = SKILLS;
   onClick(){
     console.log(this.form.value)
-    let newSkill  :Skill = {title: this.form.value.habilidadNombre,percent: this.form.value.porcentajeForm,idUser:this.usuarioId};
+    let newSkill  :Skill = {title: this.form.value.habilidadNombre,percent: this.form.value.porcentajeForm,iduser:this.usuarioId};
     this.habilidades.push(newSkill)
     this.skillService.addSkills(newSkill)
   }

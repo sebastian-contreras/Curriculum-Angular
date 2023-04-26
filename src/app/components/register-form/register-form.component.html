@@ -1,26 +1,14 @@
-<form >
-    <!-- Name input -->
-    <div class="form-outline mb-4">
-        <label class="form-label" for="registerName">Name</label>
-        <input type="text" id="registerName" class="form-control-sm form-control" />
-    </div>
-
-    <!-- Username input -->
-    <div class="form-outline mb-4">
-        <label class="form-label" for="registerUsername">Username</label>
-        <input type="text" id="registerUsername" class=" form-control-sm form-control" />
-    </div>
-
+<h2 class="fw-bold mb-4">Registrate para crear tu curriculum</h2>
+<form [formGroup]="form" >
     <!-- Email input -->
     <div class="form-outline mb-4">
-        <label class="form-label" for="registerEmail">Email</label>
-        <input type="email" id="registerEmail" class="form-control form-control-sm" />
+        <label class="form-label" for="registerName">Email</label>
+        <input formControlName="email" type="email" id="registerName" class="form-control-sm form-control" />
     </div>
-
     <!-- Password input -->
     <div class="form-outline mb-4">
         <label class="form-label" for="registerPassword">Password</label>
-        <input type="password" id="registerPassword" class="form-control form-control-sm" />
+        <input formControlName="contrasena" type="password" id="registerPassword" class="form-control form-control-sm" />
     </div>
 
     <!-- Repeat Password input -->
@@ -28,16 +16,13 @@
         <label class="form-label" for="registerRepeatPassword">Repeat password</label>
         <input type="password" id="registerRepeatPassword" class="form-control form-control-sm" />
     </div>
-
-    <!-- Checkbox -->
-    <div class="form-check d-flex justify-content-center mb-4">
-        <label class="form-check-label" for="registerCheck">
-        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-            aria-describedby="registerCheckHelpText" />
-            I have read and agree to the terms
-        </label>
+    
+    <!-- Nombre Completo input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="registerUsername">Nombre Completo</label>
+        <input formControlName="nombre" type="text" id="registerUsername" class=" form-control-sm form-control" />
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+    <button (click)="onClick()" type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
 </form>

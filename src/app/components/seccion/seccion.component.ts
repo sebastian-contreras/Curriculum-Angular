@@ -24,13 +24,13 @@ export class SeccionComponent {
     console.log(this.form.value)
     console.log(this.title)
     if(this.title==='Experiencia'){
-      let newHistoria: Historia = {idUser:this.usuarioId,tipo:false,title:this.form.value.titulo||"",place:this.form.value.lugar||"",image:this.form.value.imagen||"",date:this.form.value.fecha||""}
+      let newHistoria: Historia = {iduser:this.usuarioId,tipo:false,title:this.form.value.titulo||"",place:this.form.value.lugar||"",image:this.form.value.imagen||"",date:this.form.value.fecha||""}
       this.historiaServicio.addHistoria('EXPERIENCIAS',newHistoria)
       this.arreglo.push(newHistoria)
       console.log('holaa expero')
     }
     else{
-      let newHistoria: Historia = {idUser:this.usuarioId,tipo:true,title:this.form.value.titulo||"",place:this.form.value.lugar||"",image:this.form.value.imagen||"",date:this.form.value.fecha||""}
+      let newHistoria: Historia = {iduser:this.usuarioId,tipo:true,title:this.form.value.titulo||"",place:this.form.value.lugar||"",image:this.form.value.imagen||"",date:this.form.value.fecha||""}
       this.historiaServicio.addHistoria('EDUCACIONES',newHistoria)
       this.arreglo.push(newHistoria)
       console.log('holaa edicacopm')

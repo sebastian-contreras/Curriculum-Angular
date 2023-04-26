@@ -14,7 +14,14 @@ const routes: Routes = [
       { path: 'register', component: RegisterFormComponent },
     ],
   },
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+    children: [
+      { path: '', component: LoginFormComponent },
+      { path: 'register', component: RegisterFormComponent },
+    ],
+  },
   { path: ':id', component: HomeComponent },
 ];
 

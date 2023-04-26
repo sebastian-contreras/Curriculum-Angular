@@ -21,7 +21,7 @@ export class ProyectosSeccionComponent {
   onClick() {
     console.log(this.form.value);
     let newProyecto: Proyect = {
-      idUser: this.usuarioId,
+      iduser: this.usuarioId,
       title: this.form.value.tituloForm,
       text: this.form.value.textForm,
       url: this.form.value.urlForm,

@@ -1,14 +1,14 @@
-<form>
+<form [formGroup]="form">
     <!-- Email input -->
     <div class="form-outline mb-4">
-      <input type="email" id="form3Example3" class="form-control form-control-lg"
+      <input formControlName="email" type="email" id="form3Example3" class="form-control form-control-lg"
         placeholder="Ingrese su email" />
       <label class="form-label" for="form3Example3">Email</label>
     </div>
 
     <!-- Password input -->
     <div class="form-outline mb-3">
-      <input type="password" id="form3Example4" class="form-control form-control-lg"
+      <input formControlName="password" type="password" id="form3Example4" class="form-control form-control-lg"
         placeholder="Ingrese su contraseña" />
       <label class="form-label" for="form3Example4">Contraseña</label>
     </div>
@@ -24,10 +24,10 @@
     </div>
 
     <div class="text-center text-lg-start mt-4 pt-2">
-      <button type="button" class="btn btn-primary btn-lg"
+      <button (click)="onClick()" type="button" class="btn btn-primary btn-lg"
         style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
       <p class="small fw-bold mt-2 pt-1 mx-3 mb-0">No tienes curriculum? <a routerLink="register"
-          class="link-danger">Register</a></p>
+          class="link-danger">Registrate</a></p>
     </div>
 
   </form>

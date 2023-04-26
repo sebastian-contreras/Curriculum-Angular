@@ -2,7 +2,6 @@
   "USERS": [
     {
       "id": 1,
-      "username": "sebas",
       "fullName": "Sebastian Contreras",
       "password": "12345",
       "aboutMe": "Lorem dolor sit amet consectetur adipisicing elit. Minima quo nesciunt accusamus dicta delectus ullam porro voluptatibus unde esse, qwdqwdqwrecusandae eum assumenda magnam consequuntur beatae necessitatibus iusto reprehenderit harum ipsa?123",
@@ -14,7 +13,7 @@
   "HISTORIAS": [
     {
       "id": 1,
-      "idUsuario": 1,
+      "idusuario": 1,
       "title": "Backend Developers",
       "place": "Globant - Jornada Parcial",
       "date": "2014-2020",
@@ -23,16 +22,16 @@
     },
     {
       "id": 2,
-      "idUsuario": 1,
-      "title": " Frontend Developer",
-      "place": "Pixar - Jornada Parcial",
-      "date": "2014-2020",
-      "image": "./assets/images/trabajos/globant.png",
+      "iduser": 1,
+      "title": "",
+      "place": "",
+      "date": "",
+      "image": ".",
       "tipo": false
     },
     {
       "id": 3,
-      "idUsuario": 1,
+      "idusuario": 1,
       "title": "Universidad Nacional de tucuman",
       "place": "Ingenieria en Computacion",
       "date": "2017-Actualidad",
@@ -41,7 +40,7 @@
     },
     {
       "id": 4,
-      "idUsuario": 1,
+      "idusuario": 1,
       "title": "Titulo Secundario",
       "place": "Instituto Congreso de tucuman SEOC",
       "date": "2014-2016",
@@ -61,19 +60,13 @@
   "SKILLS": [
     {
       "id": 1,
-      "idUsuario": 1,
+      "idusuario": 1,
       "title": "HTML",
       "percent": 70
     },
     {
-      "id": 2,
-      "idUsuario": 1,
-      "title": "CSS",
-      "percent": 30
-    },
-    {
       "id": 4,
-      "idUsuario": 1,
+      "idusuario": 1,
       "title": "Angular",
       "percent": 60
     }
@@ -81,21 +74,21 @@
   "PROYECTS": [
     {
       "id": 1,
-      "idUsuario": 1,
+      "idusuario": 1,
       "title": "Bsase sde datos de Sistema de salud orientada a Covid-19",
       "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe maiores cum blanditiis cupiditate adipisci suscipit minima obcaecati dolores, voluptate numquam accusamus architecto incidunt quas fuga quidem modi eum quod. Debitis!",
       "url": "https://www.github.com"
     },
     {
       "id": 2,
-      "idUsuario": 1,
+      "idusuario": 1,
       "title": "Base de datos y Documentacion sistema de stock KCrepuestos",
       "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe maiores cum blanditiis cupiditate adipisci suscipit minima obcaecati dolores, voluptate numquam accusamus architecto incidunt quas fuga quidem modi eum quod. Debitis!",
       "url": "string"
     },
     {
       "id": 3,
-      "idUsuario": 1,
+      "idusuario": 1,
       "title": "Contador de insectos en Sticky paper IA",
       "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe maiores cum blanditiis cupiditate adipisci suscipit minima obcaecati dolores, voluptate numquam accusamus architecto incidunt quas fuga quidem modi eum quod. Debitis!",
       "url": "string"

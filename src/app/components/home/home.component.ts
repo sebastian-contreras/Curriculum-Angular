@@ -21,7 +21,6 @@ export class HomeComponent {
   seccionEducacion: string = 'Educacion';
   user: User = {
     id: 0,
-    username: '',
     email: '',
     password: '',
     fullName: '',
