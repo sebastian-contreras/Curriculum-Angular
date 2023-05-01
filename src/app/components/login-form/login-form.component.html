@@ -1,14 +1,14 @@
 <form [formGroup]="form">
     <!-- Email input -->
     <div class="form-outline mb-4">
-      <input formControlName="email" type="email" id="form3Example3" class="form-control form-control-lg"
+      <input [(ngModel)]="creds.email" formControlName="email" type="email" id="form3Example3" class="form-control form-control-lg"
         placeholder="Ingrese su email" />
       <label class="form-label" for="form3Example3">Email</label>
     </div>
 
     <!-- Password input -->
     <div class="form-outline mb-3">
-      <input formControlName="password" type="password" id="form3Example4" class="form-control form-control-lg"
+      <input [(ngModel)]="creds.password" formControlName="password" type="password" id="form3Example4" class="form-control form-control-lg"
         placeholder="Ingrese su contraseña" />
       <label class="form-label" for="form3Example4">Contraseña</label>
     </div>
