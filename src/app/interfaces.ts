@@ -1,8 +1,7 @@
 export interface User {
   id?: number;
   email?:string;
-  password:String;
-  fullName:string;
+  fullname:string;
   aboutMe?: string;
   shortEducation?: string;
   image?: string;
@@ -11,7 +10,7 @@ export interface User {
 
 export interface Historia {
   id?: number;
-  iduser:number;
+  idusuario:number;
   title: string;
   place: string;
   date: string;
@@ -22,7 +21,7 @@ export interface Historia {
 
 export interface Skill   {
     id?: number;
-    iduser?:number;
+    idusuario?:number;
     title: string;
     percent: number;
 }
@@ -32,7 +31,7 @@ export interface Credentials   {
 }
 export interface Proyect {
     id?: number;
-    iduser?:number;
+    idusuario?:number;
     title: string;
     text: string;
     url: string;

@@ -3,8 +3,7 @@ import { Historia, Proyect, Skill, User } from './interfaces';
 export const USERS: User[] = [
   {
     id: 0,
-    fullName: '',
-    password: '',
+    fullname: '',
     aboutMe:
       '',
     shortEducation: '',
@@ -13,8 +12,7 @@ export const USERS: User[] = [
   },
   {
     id: 1,
-    fullName: '',
-    password: '',
+    fullname: '',
     aboutMe:
       '',
     shortEducation: '',
@@ -26,7 +24,7 @@ export const USERS: User[] = [
 export const HISTORIAS: Historia[] = [
   {
     id: 1,
-    iduser:1,
+    idusuario:1,
     title: '',
     place: '',
     date: '',
@@ -35,7 +33,7 @@ export const HISTORIAS: Historia[] = [
   },
   {
     id: 2,
-    iduser:1,
+    idusuario:1,
     title: '',
     place: '',
     date: '',
@@ -44,7 +42,7 @@ export const HISTORIAS: Historia[] = [
   },
   {
     id: 3,
-    iduser:1,
+    idusuario:1,
     title: '',
     place: '',
     date: '',
@@ -53,7 +51,7 @@ export const HISTORIAS: Historia[] = [
   },
   {
     id: 4,
-    iduser:1,
+    idusuario:1,
     title: '',
     place: '',
     date: '',

@@ -10,7 +10,7 @@
     <div id="infoCabecera" class="px-5">
         <span>
             <div class="tituloSeccion">
-                <h3 class="fw-bold">{{usuario.fullName}}</h3>
+                <h3 class="fw-bold">{{usuario.fullname}}</h3>
                 <button data-bs-toggle="modal" data-bs-target="#ModalCabecera" class="btn btn-success btn-sm rounded-0 crudIcon"><i class="fa fa-edit"></i></button>
             </div>
             <div class="row">
@@ -46,7 +46,7 @@
                 <form [formGroup]="form">
                     <div class="mb-3">
                         <label for="disabledTextInput" class="form-label">Nombre Completo</label>
-                        <input  disabled type="text" id="disabledTextInput" class="form-control" placeholder={{usuario.fullName}}>
+                        <input  disabled type="text" id="disabledTextInput" class="form-control" placeholder={{usuario.fullname}}>
                       </div>
                     <div class="form-group mb-2">
                         <label for="formGroupExampleInput">Educacion principal</label>

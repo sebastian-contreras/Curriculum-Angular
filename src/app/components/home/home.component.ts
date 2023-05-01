@@ -22,8 +22,7 @@ export class HomeComponent {
   user: User = {
     id: 0,
     email: '',
-    password: '',
-    fullName: '',
+    fullname: '',
     aboutMe: '',
     shortEducation: '',
     image: '',

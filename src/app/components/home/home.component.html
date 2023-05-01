@@ -1,4 +1,4 @@
-<app-header [title]="user.fullName"></app-header>
+<app-header [title]="user.fullname"></app-header>
 <div class="container">
     <app-cabecera [usuario]="user"></app-cabecera>
     <app-about-me [informacion]="user"></app-about-me>
@@ -6,6 +6,6 @@
     <app-seccion [title]='seccionExperiencia' [arreglo]="experiencias" [usuarioId]="user.id || 0"></app-seccion>
     <app-seccion [title]='seccionEducacion' [arreglo]="educaciones" [usuarioId]="user.id || 0"></app-seccion>
     <app-hard [habilidades]="habilidades" [usuarioId]="user.id || 0"></app-hard>
-    <app-proyectos-seccion [proyectos]="proyectos"></app-proyectos-seccion>
+    <app-proyectos-seccion [proyectos]="proyectos" [usuarioId]="user.id || 0"></app-proyectos-seccion>
 </div>
 <app-footer></app-footer>

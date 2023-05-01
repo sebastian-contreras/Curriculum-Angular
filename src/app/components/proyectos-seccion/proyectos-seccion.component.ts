@@ -12,7 +12,7 @@ import { ProyectosService } from 'src/app/services/proyectos.service';
 export class ProyectosSeccionComponent {
   constructor(private proyectosService: ProyectosService) {}
   @Input() proyectos: Proyect[] = PROYECTS;
-  @Input() usuarioId: number = 0;
+  @Input() usuarioId: number = 0  ;
   form = new FormGroup({
     tituloForm: new FormControl(),
     textForm: new FormControl(),
@@ -21,11 +21,12 @@ export class ProyectosSeccionComponent {
   onClick() {
     console.log(this.form.value);
     let newProyecto: Proyect = {
-      iduser: this.usuarioId,
+      idusuario: this.usuarioId,
       title: this.form.value.tituloForm,
       text: this.form.value.textForm,
       url: this.form.value.urlForm,
     };
+    console.log(this.usuarioId)
     this.proyectos.push(newProyecto);
     this.proyectosService.addProyecto(newProyecto);
   }

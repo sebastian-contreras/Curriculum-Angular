@@ -8,6 +8,7 @@ import { map } from 'rxjs';
 })
 export class AuthService {
   private apiUrl: string = 'http://localhost:8080';
+  public estado: boolean = false;
   constructor(private http: HttpClient) {}
 
   login(creeds: Credentials) {
@@ -20,14 +21,23 @@ export class AuthService {
           const body = response.body;
           const headers = response.headers;
           const bearerToken = headers.get('Authentication')!;
-          const token = bearerToken.replace('Bearer', '');
+          const {token,user:{id}} = response.body;
+          this.estado = true
           localStorage.setItem('token', token);
-          return body;
+          localStorage.setItem('idUsuario',id);
+          console.log(response.body)
+          return id;
         })
       );
   }
 
   getToken() {
     return localStorage.getItem('token');
+  }
+  getEstado() {
+    return this.estado;
+  }
+  getId() {
+    return localStorage.getItem('idUsuario');
   }
 }

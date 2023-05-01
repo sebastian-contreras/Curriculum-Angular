@@ -22,7 +22,7 @@
     },
     {
       "id": 2,
-      "iduser": 1,
+      "idusuario": 1,
       "title": "",
       "place": "",
       "date": "",
@@ -48,7 +48,7 @@
       "tipo": true
     },
     {
-      "idUser": 1,
+      "idusuario": 1,
       "tipo": false,
       "title": "Google Design",
       "place": "Google",

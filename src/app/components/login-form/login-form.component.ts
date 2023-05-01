@@ -23,7 +23,10 @@ export class LoginFormComponent {
     console.log(this.form.value)
     this.authService.login(this.creds)
     .subscribe(response=>{
-      this.router.navigate(['/']);
+      const id = response
+// console.log(id)
+// console.log(response)
+      this.router.navigate([`/${id}`]);
     })
   }
 }
