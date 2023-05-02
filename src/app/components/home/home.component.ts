@@ -46,7 +46,7 @@ export class HomeComponent {
       .getUser(idUsuario)
       .pipe(
         catchError((err) => {
-          this.router.navigate(['/login']);
+          // this.router.navigate(['/login']);
           return throwError(err);
         })
       )
