@@ -30,7 +30,25 @@ export class AuthService {
         })
       );
   }
-
+  registrate(creeds: Credentials) {
+    return this.http
+      .post(`${this.apiUrl}/api/v1/auth/registrate`, creeds, {
+        observe: 'response',
+      })
+      .pipe(
+        map((response: HttpResponse<any>) => {
+          const body = response.body;
+          const headers = response.headers;
+          const bearerToken = headers.get('Authentication')!;
+          const {token,user:{id}} = response.body;
+          this.estado = true
+          localStorage.setItem('token', token);
+          localStorage.setItem('idUsuario',id);
+          console.log(response.body)
+          return id;
+        })
+      );
+  }
   getToken() {
     return localStorage.getItem('token');
   }

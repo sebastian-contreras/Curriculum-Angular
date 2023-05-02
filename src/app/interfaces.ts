@@ -26,6 +26,7 @@ export interface Skill   {
     percent: number;
 }
 export interface Credentials   {
+  fullname? : string;
   email: string;
   password: string;
 }

@@ -3,24 +3,18 @@
     <!-- Email input -->
     <div class="form-outline mb-4">
         <label class="form-label" for="registerName">Email</label>
-        <input formControlName="email" type="email" id="registerName" class="form-control-sm form-control" />
+        <input [(ngModel)]="creds.email" formControlName="email" type="email" id="registerName" class="form-control-sm form-control" />
     </div>
     <!-- Password input -->
     <div class="form-outline mb-4">
         <label class="form-label" for="registerPassword">Password</label>
-        <input formControlName="contrasena" type="password" id="registerPassword" class="form-control form-control-sm" />
+        <input [(ngModel)]="creds.password" formControlName="contrasena" type="password" id="registerPassword" class="form-control form-control-sm" />
     </div>
 
-    <!-- Repeat Password input -->
-    <div class="form-outline mb-4">
-        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-        <input type="password" id="registerRepeatPassword" class="form-control form-control-sm" />
-    </div>
-    
     <!-- Nombre Completo input -->
     <div class="form-outline mb-4">
         <label class="form-label" for="registerUsername">Nombre Completo</label>
-        <input formControlName="nombre" type="text" id="registerUsername" class=" form-control-sm form-control" />
+        <input [(ngModel)]="creds.fullname" formControlName="nombre" type="text" id="registerUsername" class=" form-control-sm form-control" />
     </div>
 
     <!-- Submit button -->

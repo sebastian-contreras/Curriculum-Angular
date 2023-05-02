@@ -65,4 +65,11 @@ article .tituloSeccion i{
 	float:right;
 	margin-inline-end: 1rem;
 }
-	
+footer {
+	position: relative;
+	width: 100%;
+	bottom: 0;
+  }
+  escenaForm{
+	min-height: 100%;
+  }
