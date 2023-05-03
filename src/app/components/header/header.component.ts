@@ -8,6 +8,8 @@ import { User } from 'src/app/interfaces';
 })
 export class HeaderComponent {
   @Input() title:String = "";
+  @Input() session: boolean = false;
+  @Input() user?: User;
   constructor(private router: Router){}
 
   ngOnInit() {

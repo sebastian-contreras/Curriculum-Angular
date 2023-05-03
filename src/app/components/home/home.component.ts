@@ -53,6 +53,7 @@ export class HomeComponent {
       .subscribe((user) => {
         this.user = user;
       });
+
     this.experienciaService
       .getExperiencias(idUsuario)
       .subscribe((historias) => {
@@ -66,5 +67,7 @@ export class HomeComponent {
       this.proyectos = proyectos;
     });
   }
-  session = (Number(this.authService.getIdSession) === Number(this.route.snapshot.params['id']));
+  session : boolean = (Number(this.authService.getId()) === Number(this.route.snapshot.params['id']));
+  // console.log(`sesion id: ${this.authService.getId()} and ${session}`)
+
 }
