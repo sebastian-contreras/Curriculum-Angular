@@ -1,7 +1,7 @@
 <div id="cabecera" class="bordesCebecera">
     <div id="cabeceraImagen" class="position-relative">
         <div class="PortadaEstilo">
-            <img src={{usuario.portraitImage}} alt="">
+            <img src={{usuario.portraitImage}} class="img-fluid" alt="">
         </div>
         <!-- <div class="fotoContainer"> -->
             <img src={{usuario.image}} class="fotoContainer fotoPerfil position-absolute translate-middle-y" alt="">
@@ -14,7 +14,7 @@
                 <button *ngIf="session" data-bs-toggle="modal" data-bs-target="#ModalCabecera" class="btn btn-success btn-sm rounded-0 crudIcon"><i class="fa fa-edit"></i></button>
             </div>
             <div class="row">
-                <div class="col-6 text-end">
+                <div class="col-6">
                     <span class="fw-bold d-block">{{usuario.shortEducation}}</span>
                 </div>
             </div>
@@ -90,12 +90,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <h4 class="fw-bold">Email de contacto</h4><br>
+            <h4 class="fw-bold">Email de contacto</h4>
           {{usuario.email}}
             <div>
-                <h4 class="fw-bold">Redes Sociales y Github</h4><br>
-                <a *ngIf="usuario.github" class="fw-normal fs-5" href={{usuario.github}}>github</a><br>
-                <a *ngIf="usuario.instagram" class="fw-normal fs-5" href={{usuario.instagram}}>instagram</a><br>
+                <h4 class="fw-bold">Redes Sociales y Github</h4>
+                <a *ngIf="usuario.github" class="fw-normal fs-5" href={{usuario.github}}>Github</a><br>
+                <a *ngIf="usuario.instagram" class="fw-normal fs-5" href={{usuario.instagram}}>Instagram</a><br>
                 <a *ngIf="usuario.linkedin" class="fw-normal fs-5" href={{usuario.linkedin}}>Linkedin</a>
             </div>
         </div>

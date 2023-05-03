@@ -20,3 +20,7 @@
 #infoCabecera p{
 	margin-bottom: 0.1rem;
 }
+PortadaEstilo img {
+	height: 100%;
+	width: 100%;
+}

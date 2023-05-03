@@ -14,7 +14,9 @@ export class HeaderComponent {
   constructor(private router: Router, private authService: AuthService){}
   sessionId? = this.authService.getId()
   ngOnInit() {
-    console.log(this.title)
+    console.log(this.session)
+    console.log(this.authService.getId())
+
   }
 
   login(){

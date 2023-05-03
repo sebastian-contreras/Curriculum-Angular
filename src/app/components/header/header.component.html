@@ -7,11 +7,11 @@
                     <a href={{user.linkedin}}><i class="fs-3 fa-brands fa-linkedin mx-1"></i></a>
                     <a href={{user.instagram}}><i class="fs-3 fa-brands fa-square-instagram mx-1"></i></a>
                     <a href={{user.github}}><i class="fs-3 fa-brands fa-square-github mx-1"></i></a>
-                    <a *ngIf="session" routerLink="/{{sessionId}}"><i class="fs-3 fa-brands mx-5 fa-square-github mx-1"></i></a>
+                    <a *ngIf="sessionId != user.id && sessionId" href="/{{sessionId}}"><i class="fs-3 fa-solid mx-5 fa-house mx-1"></i></a>
                 </div>
-                {{1+1}}
-                <button *ngIf="!session" class="mx-3 btn btn-sm btn-outline-success" (click)="login()">Login</button>
-                <button *ngIf="session" class="mx-3 btn btn-sm btn-outline-alert" (click)="logout()">Logout</button>
+                <button *ngIf="sessionId" class="mx-3 btn btn-sm btn-outline-danger" (click)="logout()">Logout</button>
+
+                <button *ngIf="!sessionId" class="mx-3 btn btn-sm btn-outline-success" (click)="login()">Login</button>
 
             </div>
         </div>
