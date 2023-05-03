@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces';
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,8 +11,8 @@ export class HeaderComponent {
   @Input() title:String = "";
   @Input() session: boolean = false;
   @Input() user?: User;
-  constructor(private router: Router){}
-
+  constructor(private router: Router, private authService: AuthService){}
+  sessionId? = this.authService.getId()
   ngOnInit() {
     console.log(this.title)
   }
@@ -19,4 +20,9 @@ export class HeaderComponent {
   login(){
     this.router.navigate(['/login']);
   }  
+  logout(){
+    this.authService.logout()
+    this.router.navigate(['/login']);
+
+  }
 }

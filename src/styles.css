@@ -65,6 +65,9 @@ article .tituloSeccion i{
 	float:right;
 	margin-inline-end: 1rem;
 }
+.redes a {
+	text-decoration: none !important;
+}
 footer {
 	position: relative;
 	width: 100%;

@@ -2,12 +2,13 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Credentials } from '../interfaces';
 import { map } from 'rxjs';
+import { API_URL } from '../constantes';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl: string = 'http://localhost:8080';
+  private apiUrl: string = API_URL;
   private idSession: number = 0;
   constructor(private http: HttpClient) {}
 
@@ -56,5 +57,8 @@ export class AuthService {
   }
   getId() {
     return localStorage.getItem('idUsuario');
+  }
+  logout(){
+    localStorage.clear();
   }
 }

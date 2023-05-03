@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Credentials } from 'src/app/interfaces';
 import { AuthService } from 'src/app/services/auth.service';
@@ -11,8 +11,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginFormComponent {
   form = new FormGroup({
-    email: new FormControl(),
-    password: new FormControl()
+    email: new FormControl('',[Validators.email,Validators.required]),
+    password: new FormControl('',[Validators.required,Validators.minLength(4)])
   })
   creds: Credentials = {
     email:'',
@@ -28,5 +28,12 @@ export class LoginFormComponent {
 // console.log(response)
       this.router.navigate([`/${id}`]);
     })
+  }
+
+  get email(){
+    return this.form.get('email');
+  }
+  get password(){
+    return this.form.get('password');
   }
 }

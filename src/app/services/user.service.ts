@@ -3,12 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError } from 'rxjs';
 import { User, Historia } from '../interfaces';
 import { AuthService } from './auth.service';
+import { API_URL } from '../constantes';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrl: string = 'http://localhost:8080';
+  private apiUrl: string = API_URL;
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient, private authService : AuthService) {}

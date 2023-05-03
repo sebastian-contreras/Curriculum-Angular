@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">Porcentaje de conocimiento</label>
-                  <input [ngModel]="skill.percent" formControlName="porcentajeForm" step="10" min="0" max="100" type="number" class="form-control" id="formGroupExampleInput2" placeholder="0 - 100">
+                  <input [ngModel]="skill.percent" pattern="^[0-100]+" formControlName="porcentajeForm" step="10" min="0" max="100" type="number" class="form-control" id="formGroupExampleInput2" placeholder="0 - 100">
                 </div>
               </form>
         </div>

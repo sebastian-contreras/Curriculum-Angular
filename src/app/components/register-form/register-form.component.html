@@ -1,22 +1,30 @@
 <h2 class="fw-bold mb-4">Registrate para crear tu curriculum</h2>
-<form [formGroup]="form" >
+<form (ngSubmit)="form.valid && onClick()" class="needs-validation" [formGroup]="form" >
     <!-- Email input -->
     <div class="form-outline mb-4">
         <label class="form-label" for="registerName">Email</label>
-        <input [(ngModel)]="creds.email" formControlName="email" type="email" id="registerName" class="form-control-sm form-control" />
+        <input  [ngClass]="{'is-invalid':email?.invalid && email?.dirty}" [(ngModel)]="creds.email" formControlName="email" type="email" id="registerName" class="form-control-sm form-control" />
+        <div class="invalid-feedback" *ngIf="email?.errors?.['email'] && (email?.dirty || email?.touched)">
+            Ingrese un email correcto
+           </div>
     </div>
     <!-- Password input -->
     <div class="form-outline mb-4">
         <label class="form-label" for="registerPassword">Password</label>
-        <input [(ngModel)]="creds.password" formControlName="contrasena" type="password" id="registerPassword" class="form-control form-control-sm" />
+        <input  [ngClass]="{'is-invalid': !password?.valid && password?.touched}" [(ngModel)]="creds.password" formControlName="contrasena" type="password" id="registerPassword" class="form-control form-control-sm" />
+        <div class="invalid-feedback" *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+            Ingrese una contraseña mayor a 4 caracteres 
+           </div>
     </div>
-
     <!-- Nombre Completo input -->
     <div class="form-outline mb-4">
         <label class="form-label" for="registerUsername">Nombre Completo</label>
-        <input [(ngModel)]="creds.fullname" formControlName="nombre" type="text" id="registerUsername" class=" form-control-sm form-control" />
+        <input  [ngClass]="{'is-invalid': fullname?.invalid && fullname?.touched}" [(ngModel)]="creds.fullname" formControlName="nombre" type="text" id="registerUsername" class=" form-control-sm form-control" required/>
+        <div class="invalid-feedback" *ngIf="!fullname?.valid && (fullname?.dirty || fullname?.touched)">
+            Ingrese su nombre completo
+           </div>
     </div>
 
     <!-- Submit button -->
-    <button (click)="onClick()" type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+    <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
 </form>

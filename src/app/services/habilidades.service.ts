@@ -3,12 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError } from 'rxjs';
 import { Skill } from '../interfaces';
 import { AuthService } from './auth.service';
+import { API_URL } from '../constantes';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadesService {
-  private apiUrl: string = 'http://localhost:8080';
+  private apiUrl: string = API_URL;
   constructor(private http: HttpClient, private authService : AuthService) {}
   private httpOptions = {
     headers: new HttpHeaders({
