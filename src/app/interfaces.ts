@@ -6,6 +6,9 @@ export interface User {
   shortEducation?: string;
   image?: string;
   portraitImage?: string;
+  github?:string;
+  instagram?:string;
+  linkedin?:string;
 }
 
 export interface Historia {

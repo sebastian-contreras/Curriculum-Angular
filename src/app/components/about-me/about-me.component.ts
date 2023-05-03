@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 import {USERS} from '../../mock'
 import {User} from '../../interfaces'
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -11,6 +12,7 @@ import {User} from '../../interfaces'
 export class AboutMeComponent {
   constructor(private userService: UserService){}
   @Input() informacion: User = USERS[0]
+  @Input() session : boolean = false;
   form = new FormGroup({
     textoArea: new FormControl(""),
   });

@@ -1,9 +1,9 @@
 <article class="trabajo">
     <div class="tituloSeccion ">
         <h6 class="fw-bold">{{cardHistoria.title}}</h6>
-        <button class="btn btn-success btn-sm rounded-0 crudIcon" data-bs-toggle="modal" [attr.data-bs-target]="'#EdicionModal'+cardHistoria.id"  type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+        <button *ngIf="session" class="btn btn-success btn-sm rounded-0 crudIcon" data-bs-toggle="modal" [attr.data-bs-target]="'#EdicionModal'+cardHistoria.id"  type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
         <!-- <button data-bs-toggle="modal" [attr.data-bs-target]="'#EdicionModal'+cardHistoria.id" class="crudIcon fa-solid fa-pen"></button> -->
-        <button (click)="onClickDelete()" class="btn btn-danger btn-sm rounded-0 crudIcon" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+        <button *ngIf="session" (click)="onClickDelete()" class="btn btn-danger btn-sm rounded-0 crudIcon" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
         <!-- <button (click)="onClickDelete()" class=" px-2 crudIcon fa-solid fa-trash"></button>
         <button class="crudIcon fa-trash fa-solid" (click)="onClickDelete()"></button> -->
       </div>

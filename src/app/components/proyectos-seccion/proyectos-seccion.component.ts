@@ -13,6 +13,8 @@ export class ProyectosSeccionComponent {
   constructor(private proyectosService: ProyectosService) {}
   @Input() proyectos: Proyect[] = PROYECTS;
   @Input() usuarioId: number = 0  ;
+  @Input() session : boolean = false;
+
   form = new FormGroup({
     tituloForm: new FormControl(),
     textForm: new FormControl(),

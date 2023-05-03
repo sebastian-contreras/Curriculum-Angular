@@ -17,6 +17,7 @@ export class ProgressComponent {
   });
   @Output() SacarDatoPadre = new EventEmitter<number>();
   @Input() skill: Skill = SKILLS[0]
+  @Input() session : boolean = false;
   title: string = this.skill.title
   porcentaje : number = this.skill.percent
 

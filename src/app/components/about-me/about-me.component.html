@@ -3,7 +3,7 @@
     <div class="tituloSeccion">
         <h3 class="fw-bold">Acerca de mi</h3>
         <!-- <button class="crudIcon fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#exampleModal"></button> -->
-        <button class="btn btn-success btn-sm rounded-0 crudIcon" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+        <button *ngIf="session" class="btn btn-success btn-sm rounded-0 crudIcon" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
 
       </div>
     <p>{{informacion.aboutMe}}</p>

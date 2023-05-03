@@ -11,6 +11,8 @@ export class ProyectoComponentComponent {
   constructor(private proyectosService:ProyectosService){}
   @Output() SacarDatoPadre = new EventEmitter<number>();
   @Input() unidad = PROYECTS[0]
+  @Input() session : boolean = false;
+
   form = new FormGroup({
     tituloForm: new FormControl(),
     textForm: new FormControl(),

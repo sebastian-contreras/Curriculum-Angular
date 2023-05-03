@@ -10,6 +10,7 @@ import { HabilidadesService } from 'src/app/services/habilidades.service';
 })
 export class HardComponent {
   constructor(private skillService:HabilidadesService){}
+  @Input() session : boolean = false;
   title: string = " Hard skills & Soft skills"
   form = new FormGroup({
     habilidadNombre: new FormControl(),

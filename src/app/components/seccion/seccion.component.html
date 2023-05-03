@@ -1,10 +1,10 @@
 <div class="bordesSeccion">
     <div class="tituloSeccion mb-3">
     <h3 class="fw-bold">{{title}}</h3>
-        <button data-bs-toggle="modal" [attr.data-bs-target]="'#Modal'+title"  class="btn btn-primary btn-sm rounded-0 crudIcon"  type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-plus"></i></button>
+        <button *ngIf="session" data-bs-toggle="modal" [attr.data-bs-target]="'#Modal'+title"  class="btn btn-primary btn-sm rounded-0 crudIcon"  type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-plus"></i></button>
    
       </div>
-    <app-component-historia (SacarDatoPadre)="SacarHistoriaArray($event)" *ngFor="let unidad of arreglo" [cardHistoria] = "unidad"></app-component-historia>
+    <app-component-historia [session]="session" (SacarDatoPadre)="SacarHistoriaArray($event)" *ngFor="let unidad of arreglo" [cardHistoria] = "unidad"></app-component-historia>
 </div>
 
 <!-- Modal Edicion -->

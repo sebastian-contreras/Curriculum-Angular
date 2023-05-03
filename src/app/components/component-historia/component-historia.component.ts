@@ -13,6 +13,7 @@ import { ExperienciasService } from 'src/app/services/experiencias.service';
 export class ComponentHistoriaComponent {
   constructor(private historiaService: ExperienciasService){}
   @Input() cardHistoria: Historia = HISTORIAS[1];
+  @Input() session: Boolean = false;
   @Output() SacarDatoPadre = new EventEmitter<number>();
   form = new FormGroup({
     titulo: new FormControl(),

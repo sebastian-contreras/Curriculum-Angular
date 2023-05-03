@@ -7,6 +7,7 @@ import { ExperienciasService } from 'src/app/services/experiencias.service';
 import { ProyectosService } from 'src/app/services/proyectos.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, throwError } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -34,7 +35,8 @@ export class HomeComponent {
     private proyectoService: ProyectosService,
     private experienciaService: ExperienciasService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private authService : AuthService
   ) {
     console.log(route.snapshot.params['id']);
   }
@@ -44,7 +46,7 @@ export class HomeComponent {
       .getUser(idUsuario)
       .pipe(
         catchError((err) => {
-          this.router.navigate(['/login']);
+          //this.router.navigate(['/login']);
           return throwError(err);
         })
       )
@@ -64,5 +66,5 @@ export class HomeComponent {
       this.proyectos = proyectos;
     });
   }
-
+  session = (Number(this.authService.getIdSession) === Number(this.route.snapshot.params['id']));
 }

@@ -1,9 +1,9 @@
 <div class="bordesSeccion">
     <div class="tituloSeccion mb-3">
     <h3 class="fw-bold">{{title}}</h3>
-    <button class="btn btn-primary btn-sm rounded-0 crudIcon" data-bs-toggle="modal" data-bs-target="#ModalSkill" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-plus"></i></button>
+    <button *ngIf="session" class="btn btn-primary btn-sm rounded-0 crudIcon" data-bs-toggle="modal" data-bs-target="#ModalSkill" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-plus"></i></button>
     </div>
-<app-progress (SacarDatoPadre)="SacarSkillArray($event)" *ngFor="let skill of habilidades" [skill]="skill"></app-progress>
+<app-progress [session]="session" (SacarDatoPadre)="SacarSkillArray($event)" *ngFor="let skill of habilidades" [skill]="skill"></app-progress>
 </div>
 
 <!-- Modal Edicion -->

@@ -3,6 +3,7 @@ import { HISTORIAS } from 'src/app/mock';
 import { Historia } from 'src/app/interfaces';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ExperienciasService } from 'src/app/services/experiencias.service';
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-seccion',
   templateUrl: './seccion.component.html',
@@ -13,6 +14,8 @@ export class SeccionComponent {
   @Input() title: string =""
   @Input() arreglo: Historia[] = HISTORIAS
   @Input() usuarioId: number = 0
+  @Input() session : boolean = false;
+
   form = new FormGroup({
     titulo: new FormControl(""),
     lugar: new FormControl(""),

@@ -8,7 +8,7 @@ import { map } from 'rxjs';
 })
 export class AuthService {
   private apiUrl: string = 'http://localhost:8080';
-  public estado: boolean = false;
+  private idSession: number = 0;
   constructor(private http: HttpClient) {}
 
   login(creeds: Credentials) {
@@ -22,9 +22,9 @@ export class AuthService {
           const headers = response.headers;
           const bearerToken = headers.get('Authentication')!;
           const {token,user:{id}} = response.body;
-          this.estado = true
           localStorage.setItem('token', token);
           localStorage.setItem('idUsuario',id);
+          this.idSession = id;
           console.log(response.body)
           return id;
         })
@@ -41,7 +41,6 @@ export class AuthService {
           const headers = response.headers;
           const bearerToken = headers.get('Authentication')!;
           const {token,user:{id}} = response.body;
-          this.estado = true
           localStorage.setItem('token', token);
           localStorage.setItem('idUsuario',id);
           console.log(response.body)
@@ -52,8 +51,8 @@ export class AuthService {
   getToken() {
     return localStorage.getItem('token');
   }
-  getEstado() {
-    return this.estado;
+  getIdSession(){
+    return this.idSession || 0;
   }
   getId() {
     return localStorage.getItem('idUsuario');
