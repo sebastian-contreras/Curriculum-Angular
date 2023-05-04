@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:8080';
+export const API_URL = 'https://curriculum-backen-argentinaprograma-4-0.onrender.com';
