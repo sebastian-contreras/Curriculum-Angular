@@ -9,9 +9,9 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent {
   constructor(private authService: AuthService,private router: Router){}
   ngOnInit(){
-   const  sesion = this.authService.getIdSession()
+   const  sesion = this.authService.getId()
    if(sesion){
-    this.router.navigate(['/login']);
+    this.router.navigate([`/${sesion}`]);
    }
   }
 }
