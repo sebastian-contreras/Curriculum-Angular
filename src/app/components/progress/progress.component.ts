@@ -26,6 +26,8 @@ export class ProgressComponent {
     this.skill.percent = this.form.value.porcentajeForm
     this.skill.title = this.form.value.habilidadNombre
     this.skillService.modifySkill(this.skill)
+    this.form.reset()
+
   }
   onClickDelete(){
     this.skillService.deleteSkill(this.skill.id||0)

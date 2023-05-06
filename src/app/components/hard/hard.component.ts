@@ -23,6 +23,8 @@ export class HardComponent {
     let newSkill  :Skill = {title: this.form.value.habilidadNombre,percent: this.form.value.porcentajeForm,idusuario:this.usuarioId};
     this.habilidades.push(newSkill)
     this.skillService.addSkills(newSkill)
+    this.form.reset()
+
   }
   SacarSkillArray(idEliminar:number){
     console.log('componente padre')

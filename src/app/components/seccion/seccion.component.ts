@@ -39,6 +39,7 @@ export class SeccionComponent {
       console.log('holaa edicacopm')
 
     }
+    this.form.reset()
   }
   SacarHistoriaArray(idEliminar:number){
     console.log('componente padre')

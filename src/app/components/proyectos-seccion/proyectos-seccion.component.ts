@@ -31,6 +31,8 @@ export class ProyectosSeccionComponent {
     console.log(this.usuarioId)
     this.proyectos.push(newProyecto);
     this.proyectosService.addProyecto(newProyecto);
+    this.form.reset()
+
   }
   SacarProyectoArray(idEliminar: number) {
     this.proyectos = this.proyectos.filter(
